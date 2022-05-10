@@ -1,3 +1,4 @@
+from selenium.webdriver.common.by import By
 from selenium import webdriver
 from time import sleep
 
@@ -6,8 +7,8 @@ from time import sleep
 # Input here the file location of chromedriver. 
 driver = webdriver.Chrome()
 
-l = driver.find_element_by_tag_name('body')
-l.send_keys("k")
+i = driver.find_element(By.TAG_NAME, 'body')
+i.send_keys("k")
 
 # Your youtube link here.
 driver.get()
